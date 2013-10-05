@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>medium editor | demo</title>
+    <link rel="stylesheet" href="assets/css/medium-editor.css">
+    <link rel="stylesheet" href="assets/css/medium-editor-overrides.css">
+
+ </head>
+<body>
+
+<div id="container">
+<div class="editable">
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut nisl est. Nullam eget sem nibh. Vivamus non turpis dui. Fusce sit amet vulputate velit, gravida pretium tellus. Fusce mattis dictum bibendum. Sed varius, neque quis pretium interdum, nulla diam ornare est, eu hendrerit enim massa sed massa. Pellentesque consectetur ac ligula quis pulvinar. Pellentesque vel sagittis justo. Curabitur vehicula lectus et libero faucibus, a congue mi fringilla. Donec in ipsum ut leo accumsan fringilla vel vel est. Aliquam mollis felis hendrerit, lacinia mauris ac, iaculis dolor. Aliquam molestie eros eget blandit laoreet. Integer tristique non mauris nec lacinia. Morbi dictum leo congue, condimentum mauris ornare, adipiscing arcu. Aliquam pulvinar iaculis turpis, ultricies porttitor tortor. In non nulla suscipit, dapibus nisi sed, scelerisque augue.
+</div>
+</div>
+
+<!-- <script src="assets/js/jquery-1.10.2.min.js" type="text/javascript"></script> -->
+<script src="assets/js/jquery.js" type="text/javascript"></script>
+<script src="assets/js/medium-editor.min.js" type="text/javascript"></script>
+<script>
+$(document).ready(function(){
+if(localStorage.content){//set previously saved content
+	$("#container").html(localStorage.content);
+}
+
+var fileFormats = { //cuz you gotta be prepared
+	'image/png':'image',
+	'image/jpeg':'image',
+	'image/gif':'image',
+	'image/bmp':'image',
+	'png':'image',
+	'jpeg':'image',
+	'jpg':'image',
+	'gif':'image',
+	'bmp':'image',
+	'application/pdf':'document',
+	'application/msword':'document',
+	'application/vnd.openxmlformats-officedocument.wordprocessingml.document' :'document',
+	'pdf':'document',
+	'doc':'document',
+	'docx':'document',
+	'application/vnd.ms-powerpoint':'presentation',
+	'application/mspowerpoint':'presentation',
+	'application/powerpoint':'presentation',
+	'application/x-mspowerpoint':'presentation',
+	'application/vnd.openxmlformats-officedocument.presentationml.presentation' :'presentation',
+	'ppt':'presentation',
+	'pptx':'presentation',
+	'video/x-msvideo':'video',
+	'video/quicktime':'video',
+	'video/mpeg':'video',
+	'video/mp4':'video',
+	'mpeg':'video',
+	'mp4':'video',
+	'avi':'video',
+	'application/x-gtar':'archive',
+	'application/x-gzip':'archive',
+	'application/zip':'archive',
+	'application/x-rar-compressed':'archive',
+	'rar':'archive',
+	'zip':'archive',
+	'tar':'archive',
+	'mp3':'audio',
+	'audio/mpeg':'audio',
+};
+
+
+function ignoreDrag(e) {
+	var event = typeof e.originalEvent != 'undefined' ? e.originalEvent : e;
+	if (event.stopPropagation) {
+		event.stopPropagation();
+	}
+	if (event.preventDefault) {
+		event.preventDefault();
+	}
+};
+
+function previewFile(dis,files){
+var _this = dis ; //otherwise they dont propagate down the file reader
+				
+	for (var i = 0; i < files.length; i++) {
+		if (fileFormats[files[i].type] === 'image') {
+			if(window.FileReader){
+
+					var reader = new FileReader();
+					reader.onload = function (event) {
+						_this.append("<div class='file-wrap'><div class='remove'></div><img src='"+event.target.result+"'/></div>");//show a pic
+					};
+					reader.readAsDataURL(files[i]);
+				}
+		
+		}	
+		else{
+			console.log(files[i]);
+			_this.append("<div class='file-wrap'>"+
+			"<div class='remove'></div>"+
+			"<div class='file' contenteditable='false'>"+
+				"<div class='file-icon'></div>"+
+				"<div class='filename'>"+files[i].name+"</div>"+
+				"</div>"+
+			"</div>");//display as a file if not image
+		}
+		return false;
+	}
+}
+
+$("#container")//delegate so the events work on dynamic elements
+.delegate(".remove","click",function(){
+	$(this).parent().remove();
+})
+.delegate('.editable','dragover', ignoreDrag)
+.delegate('.editable','dragenter', ignoreDrag)
+.delegate(".editable","drop", function(e){			
+		e = (e&&e.originalEvent?e.originalEvent:window.event) || e;		
+		ignoreDrag(e);
+		var files = (e.files||e.dataTransfer.files);		
+		
+		previewFile($(this),files);
+		
+});
+
+var editor = new MediumEditor('.editable', {
+    anchorInputPlaceholder: 'Type a link',
+    diffLeft: 25,
+    diffTop: 10,
+    firstHeader: 'h1',
+    secondHeader: 'h2',
+    excludedActions: ['q', 's'],
+    delay: 1000
+});
+
+window.onbeforeunload = function(e) { // automatically save the content into the local pc storage
+	localStorage.content = $("#container").html();
+};
+});
+</script>
+</body>
+
+</html>
