@@ -66,17 +66,18 @@
     <section class="leaderboard leaderboard-style-one">
       <div class="container">
 
-        <h1 class="animated fadeInDown">Every great meeting starts with an agenda</h1>
+        <h1 id="main-heading" class="animated fadeInDown">Every great meeting starts with an agenda</h1>
 
-        <div class="row">
-          <a class="btn btn-clean-dark btn-lg" href="start.html">Start your meeting</a>
-          <a class="btn btn-clean-dark btn-lg" href="schedule.html">Schedule a meeting</a>
-          <a class="btn btn-clean-dark btn-lg" href="send.html">Send agenda</a>
+        <div class="row cta-group">
+          <a class="btn btn-primary btn-lg" href="start.html">Start your meeting</a>
+          <a class="btn btn-primary btn-lg" href="schedule.html">Schedule a meeting</a>
+          <a class="btn btn-primary btn-lg" href="send.html">Send agenda</a>
         </div>
 
         <h2 id="agenda">Or create an agenda by choosing a template below</h2>
 
         <div class="col-md-12" id="template-chooser">
+
           <ul class="nav nav-tabs">
             <li class="active visible-lg">
               <a data-toggle="tab" href="#popular">Popular</a>
@@ -95,14 +96,14 @@
               <a data-toggle="tab" href="#messages">How industry leaders does it</a>
             </li>
           </ul>
-          <div class="tab-content">
-            <div class="tab-pane active" id="popular">
+          <div class="tab-content row">
+            <div class="tab-pane col-md-4 active" id="popular">
               <h3 class="less-margin">Blank template</h3>
               <p>
                 Craft your own agenda from scratch. This will give you the freedom to do whatever you like!
               </p>
               <div class="row">
-                <a class="btn btn-clean-dark btn-lg" href="create-agenda.html">Create agenda</a>
+                <a id="blank" class="btn btn-clean-dark btn-lg" href="create-agenda.html">Create agenda</a>
               </div>
               <hr/>
               <h3 class="less-margin">Brainstorm</h3>
@@ -110,31 +111,18 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, dolor, commodi, nemo enim est impedit necessitatibus sed cum obcaecati error iste ipsa a repellat vel aliquam asperiores unde nihil consequuntur!
               </p>
               <div class="row">
-                <a class="btn btn-clean-dark btn-lg" href="create-agenda.html">Create agenda</a>
+                <a class="btn btn-clean-dark btn-lg" id="brainstorm" href="create-agenda.html">Create agenda</a>
               </div>
               <hr/>
               <h3 class="less-margin">I DO ART</h3>
               <p>
                 The I DO ART model is model is a technique for preparing meetings. The template consist out of the letters I DO ART beneath each other and need to be filled in before the meeting starts.
-                <ul>
-                  <li>I - Intention - What is the intention with the meeting?</li>
-                  <li>DO - Desired Outcome - What do we want to happen, what is the specific goal of the meeting?</li>
-                  <li>A - Agenda - What are the topics that we need to talk about, is there a set agenda or else one need to be made.</li>
-                  <li>R - Rules and Roles - What are the rules for the meeting, are there any set roles, as in who is responsible for what?</li>
-                  <li>T - Time - How many minutes are set aside for the meeting?</li>
-                </ul>
-
-
-
-
-
-
               </p>
               <div class="row">
-                <a class="btn btn-clean-dark btn-lg" href="create-agenda.html">Create agenda</a>
+                <a class="btn btn-clean-dark btn-lg" id="idoart" href="create-agenda.html">Create agenda</a>
               </div>
             </div>
-            <div class="tab-pane" id="scrum">
+            <div class="tab-pane col-md-4" id="scrum">
               <h3>Daily SCRUM</h3>
               <p>
                 Scrum meetings are a special kind of stand-up meeting in which everyone tells about their progress of the day before and their goals for that day. Features that need to be implemented into a release are so called user stories and bundled into sprints. The amount of time left to complete a sprint is estimated and plotted daily. From this burndown chart a burndown velocity can be calculated. This tells you when the release will be ready and if you are on track or behind.
@@ -143,7 +131,7 @@
                 The scrum master keeps track on the burndown chart and organises this meeting daily. A meeting should be timeboxed to 15 minutes.
               </p>
               <div class="row">
-                <a class="btn btn-clean-dark btn-lg" href="create-agenda.html">Create agenda</a>
+                <a class="btn btn-clean-dark btn-lg" id="scrum-daily" href="create-agenda.html">Create agenda</a>
               </div>
               <hr/>
               <h3>SCRUM Retrospect</h3>
@@ -154,16 +142,16 @@
                 The scrum master keeps track on the burndown chart and organises this meeting daily. A meeting should be timeboxed to 15 minutes.
               </p>
               <div class="row">
-                <a class="btn btn-clean-dark btn-lg" href="create-agenda.html">Create agenda</a>
+                <a class="btn btn-clean-dark btn-lg" id="scrum-retro" href="create-agenda.html">Create agenda</a>
               </div>
             </div>
-            <div class="tab-pane" id="sales">
+            <div class="tab-pane col-md-4" id="sales">
               <h3>Sales Kickoff Meeting</h3>
               <p>
                 Steve W. Martin is the author of the "Heavy Hitter" series of books for senior salespeople. He has keynoted and conducted sales training breakout sessions at hundreds of sales meetings and annual sales kickoffs. The structure of the meeting’s agenda is one of the key factors that  will determine the meeting’s overall success. Since the meeting is short, there simply isn’t enough time to devote to detailed  hands-on product training. Rather, higher level information should be presented  and the more detailed material provided online.
               </p>
               <div class="row">
-                <a class="btn btn-clean-dark btn-lg" href="create-agenda.html">Create agenda</a>
+                <a class="btn btn-clean-dark btn-lg" id="sales" href="create-agenda.html">Create agenda</a>
               </div>
               <hr/>
               <h3>B2B Sales Meeting</h3>
@@ -171,7 +159,7 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, labore excepturi molestias sit ex dolores ullam inventore optio vero quo earum voluptate nostrum commodi quasi at aut incidunt iusto nisi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, ducimus natus iusto omnis ipsa nam illum adipisci sunt praesentium magnam recusandae blanditiis velit delectus quisquam sit reiciendis dignissimos nisi aperiam!
               </p>
               <div class="row">
-                <a class="btn btn-clean-dark btn-lg" href="create-agenda.html">Create agenda</a>
+                <a class="btn btn-clean-dark btn-lg" id="b2b" href="create-agenda.html">Create agenda</a>
               </div>
               <hr/>
               <h3>B2C Sales Meeting</h3>
@@ -179,9 +167,21 @@
                 Lorem ipsum dolor, consectetur adipisicing elit. Accusamus, molestias sit ex dolores ullam inventore earum voluptate nostrum commodi quasi at aut incidunt iusto nisi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, ducimus natus iusto recusandae blanditiis velit delectus quisquam sit reiciendis dignissimos nisi aperiam!
               </p>
               <div class="row">
-                <a class="btn btn-clean-dark btn-lg" href="create-agenda.html">Create agenda</a>
+                <a class="btn btn-clean-dark btn-lg" id="b2c" href="create-agenda.html">Create agenda</a>
               </div>
             </div>
+
+            <div class="editable col-md-8" id="agenda-editor">
+              <h1>Agenda Item 1</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut nisl est. Nullam eget sem nibh. Vivamus non turpis dui. Fusce sit amet vulputate velit, gravida pretium tellus. Fusce mattis dictum bibendum. Sed varius, neque quis pretium interdum, nulla diam ornare est, eu hendrerit enim massa sed massa. Pellentesque consectetur ac ligula quis pulvinar. Pellentesque vel sagittis justo. Curabitur vehicula lectus et libero faucibus, a congue mi fringilla. Donec in ipsum ut leo accumsan fringilla vel vel est. Aliquam mollis felis hendrerit, lacinia mauris ac, iaculis dolor. Aliquam molestie eros eget blandit laoreet. Integer tristique non mauris nec lacinia. Morbi dictum leo congue, condimentum mauris ornare, adipiscing arcu. Aliquam pulvinar iaculis turpis, ultricies porttitor tortor. In non nulla suscipit, dapibus nisi sed, scelerisque augue.
+              </p>
+              <h1>Agenda Item 2</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut nisl est. Nullam eget sem nibh. Vivamus non turpis dui. Fusce sit amet vulputate velit, gravida pretium tellus. Fusce mattis dictum bibendum. Sed varius, neque quis pretium interdum, nulla diam ornare est, eu hendrerit enim massa sed massa. Pellentesque consectetur ac ligula quis pulvinar. Pellentesque vel sagittis justo. Curabitur vehicula lectus et libero faucibus, a congue mi fringilla. Donec in ipsum ut leo accumsan fringilla vel vel est. Aliquam mollis felis hendrerit, lacinia mauris ac, iaculis dolor. Aliquam molestie eros eget blandit laoreet. Integer tristique non mauris nec lacinia. Morbi dictum leo congue, condimentum mauris ornare, adipiscing arcu. Aliquam pulvinar iaculis turpis, ultricies porttitor tortor. In non nulla suscipit, dapibus nisi sed, scelerisque augue.
+              </p>
+            </div>
+
           </div>
         </div>
       </div>
@@ -239,17 +239,40 @@
     </div>
   </footer>
 
-  <!-- Agenda editor - hidden by default, parsed and shown by jQuery -->
-  <div class="editable" id="agenda-editor">
-    <h1>Agenda Item 1</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut nisl est. Nullam eget sem nibh. Vivamus non turpis dui. Fusce sit amet vulputate velit, gravida pretium tellus. Fusce mattis dictum bibendum. Sed varius, neque quis pretium interdum, nulla diam ornare est, eu hendrerit enim massa sed massa. Pellentesque consectetur ac ligula quis pulvinar. Pellentesque vel sagittis justo. Curabitur vehicula lectus et libero faucibus, a congue mi fringilla. Donec in ipsum ut leo accumsan fringilla vel vel est. Aliquam mollis felis hendrerit, lacinia mauris ac, iaculis dolor. Aliquam molestie eros eget blandit laoreet. Integer tristique non mauris nec lacinia. Morbi dictum leo congue, condimentum mauris ornare, adipiscing arcu. Aliquam pulvinar iaculis turpis, ultricies porttitor tortor. In non nulla suscipit, dapibus nisi sed, scelerisque augue.
-    </p>
-    <h1>Agenda Item 2</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut nisl est. Nullam eget sem nibh. Vivamus non turpis dui. Fusce sit amet vulputate velit, gravida pretium tellus. Fusce mattis dictum bibendum. Sed varius, neque quis pretium interdum, nulla diam ornare est, eu hendrerit enim massa sed massa. Pellentesque consectetur ac ligula quis pulvinar. Pellentesque vel sagittis justo. Curabitur vehicula lectus et libero faucibus, a congue mi fringilla. Donec in ipsum ut leo accumsan fringilla vel vel est. Aliquam mollis felis hendrerit, lacinia mauris ac, iaculis dolor. Aliquam molestie eros eget blandit laoreet. Integer tristique non mauris nec lacinia. Morbi dictum leo congue, condimentum mauris ornare, adipiscing arcu. Aliquam pulvinar iaculis turpis, ultricies porttitor tortor. In non nulla suscipit, dapibus nisi sed, scelerisque augue.
-    </p>
+
+
+<!-- Agenda templates goes down here -->
+
+  <div id="blank-agenda-template" class="hidden-agenda">
+    <h1>Meeting title</h1>
   </div>
+
+  <div id="brainstorm-agenda-template" class="hidden-agenda">
+    <h1>Brainstorm meeting</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, ex, rem, necessitatibus quis natus suscipit eaque sunt laudantium vitae sapiente atque dolorem amet iste quam accusamus esse mollitia nesciunt error.</p>
+  </div>
+
+  <div id="idoart-agenda-template" class="hidden-agenda">
+    <h1>I DO ART template</h1>
+    <h2>Intention</h2>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+    <h2>Do</h2>
+    Assumenda nulla tempora
+    <h2>Agenda</h2>
+    Quia, dolorem, adipisci earum rem ex quis ipsa perspiciatis assumenda nulla tempora amet excepturi ea odit ab doloremque similique veritatis veniam quos.
+    <h2>Intention</h2>
+    Doloremque similique veritatis
+    <h2>Rules and Roles</h2>
+    Consectetur adipisicing elit. 
+    <h2>Time</h2>
+    30:00 Minutes
+  </div>
+
+
+
+
+
+
 
   <script src='assets/js/jquery.js'></script>
   <script src='assets/js/bootstrap/button.js'></script>
@@ -274,16 +297,16 @@
 
   $('a[href="create-agenda.html"]').click(function(e){
     
-    var id = $(this).parent().parent().attr('id');
+    var id = $(this).attr('id');
 
-    console.log(id);
 
     e.preventDefault();
 
-    var $editor = $('#agenda-editor');
+    var $element = $('#'+id+'-agenda-template');
 
-    $('#'+id).html($editor.fadeIn('slow'));
-
+    $('#agenda-editor').html($element.fadeIn('slow'));
+    $('.tab-pane').hide('drop');
+    $('#agenda-editor').removeClass('col-md-8').addClass('col-md-12');
 
   });
 

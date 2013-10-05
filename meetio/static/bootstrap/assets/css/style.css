@@ -1,5 +1,5 @@
 #agenda-editor {
-	display:none;
+	
 }
 #template-chooser ul li {
 	list-style-type: none;
@@ -7,4 +7,14 @@
 }
 .visible-lg a[data-toggle="tab"] {
 	background-color: #fafaff;
+}
+.hidden-agenda {
+	display:none;
+}
+#main-heading {
+	margin-bottom:0.5em;
+	margin-top:0;
+}
+.cta-group {
+	margin-bottom:3em;
 }
