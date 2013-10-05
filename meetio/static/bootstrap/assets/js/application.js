@@ -1,83 +1,40 @@
-// NOTICE!! DO NOT USE ANY OF THIS JAVASCRIPT
-// IT'S ALL JUST JUNK FOR OUR DOCS!
-// ++++++++++++++++++++++++++++++++++++++++++
-
-!function ($) {
-
-  $(function(){
-
-    var $window = $(window)
-    var $body   = $(document.body)
-
-    var navHeight = $('.navbar').outerHeight(true) + 10
-
-    $body.scrollspy({
-      target: '.bs-sidebar',
-      offset: navHeight
-    })
-
-    $window.on('load', function () {
-      $body.scrollspy('refresh')
-    })
-
-    $('.bs-docs-container [href=#]').click(function (e) {
-      e.preventDefault()
-    })
-
-    // back to top
-    setTimeout(function () {
-      var $sideBar = $('.bs-sidebar')
-
-      $sideBar.affix({
-        offset: {
-          top: function () {
-            var offsetTop      = $sideBar.offset().top
-            var sideBarMargin  = parseInt($sideBar.children(0).css('margin-top'), 10)
-            var navOuterHeight = $('.bs-docs-nav').height()
-
-            return (this.top = offsetTop - navOuterHeight - sideBarMargin)
-          }
-        , bottom: function () {
-            return (this.bottom = $('.bs-footer').outerHeight(true))
-          }
+(function() {
+  $(function() {
+    $(".animated-when-visible").each(function(i, el) {
+      el = $(el);
+      if (el.visible(true)) {
+        return el.addClass("animated " + el.data("animation-type"));
+      }
+    });
+    $(window).scroll(function(event) {
+      return $(".animated-when-visible").each(function(i, el) {
+        el = $(el);
+        if (el.visible(true)) {
+          return el.addClass("animated " + el.data("animation-type"));
         }
-      })
-    }, 100)
+      });
+    });
+    $(".dial").knob({
+      readOnly: true,
+      draw: function() {
+        return $(this.i).val(this.cv + "%");
+      }
+    });
+    $.scrollUp({
+      scrollText: "<i class='icon-chevron-up'></i>"
+    });
+    $(".isotope-w").isotope({
+      itemSelector: '.item',
+      layoutMode: 'fitRows'
+    });
+    return $(".portfolio-filters a").click(function() {
+      var selector;
+      selector = $(this).attr("data-filter");
+      $(".isotope-w").isotope({
+        filter: selector
+      });
+      return false;
+    });
+  });
 
-    setTimeout(function () {
-      $('.bs-top').affix()
-    }, 100)
-
-    // tooltip demo
-    $('.tooltip-demo').tooltip({
-      selector: "[data-toggle=tooltip]",
-      container: "body"
-    })
-
-    $('.tooltip-test').tooltip()
-    $('.popover-test').popover()
-
-    $('.bs-docs-navbar').tooltip({
-      selector: "a[data-toggle=tooltip]",
-      container: ".bs-docs-navbar .nav"
-    })
-
-    // popover demo
-    $("[data-toggle=popover]")
-      .popover()
-
-    // button state demo
-    $('#fat-btn')
-      .click(function () {
-        var btn = $(this)
-        btn.button('loading')
-        setTimeout(function () {
-          btn.button('reset')
-        }, 3000)
-      })
-
-    // carousel demo
-    $('.bs-docs-carousel-example').carousel()
-})
-
-}(window.jQuery)
+}).call(this);
