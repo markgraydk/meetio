@@ -1,1 +1,1 @@
-web: gunicorn meetio.wsgi
+web: gunicorn wsgi
