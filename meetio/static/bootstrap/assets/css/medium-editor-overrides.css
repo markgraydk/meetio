@@ -1,9 +1,9 @@
 		.editable{
 			min-height:100px;
 			margin-bottom:25px;
-			width:660px;
+			/*width:660px;*/
 			margin:50px auto;
-			font-family:"Comic Sans MS";
+			outline:0;
 		}
 		
 		.editable img{
@@ -48,7 +48,7 @@
 		
 		/* some bs css so it looks like paper*/
 		
-		.editable
+		/*.editable
 		{
 			position: relative;
 			width: 500px;
@@ -89,4 +89,4 @@
 			-ms-transform: skew(5deg) rotate(5deg);
 			-o-transform: skew(5deg) rotate(5deg);
 			transform: skew(5deg) rotate(5deg);
-		}
+		}*/

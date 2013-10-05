@@ -1,0 +1,10 @@
+#agenda-editor {
+	display:none;
+}
+#template-chooser ul li {
+	list-style-type: none;
+	text-align: left;
+}
+.visible-lg a[data-toggle="tab"] {
+	background-color: #fafaff;
+}
