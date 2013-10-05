@@ -1,1 +1,1 @@
-web: gunicorn meetio.meetio
+web: gunicorn meetio.meetio:application
