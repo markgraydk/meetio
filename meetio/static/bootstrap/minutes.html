@@ -92,7 +92,7 @@
             </a>
             <ul class="nav navbar-nav navbar-right">
               <li class="current active">
-                <a class="current" href="#">Dashboard</a>
+                <a class="current" href="dashboard.html">Dashboard</a>
               </li>
               <li>
                 <a href="settings.html">Settings</a>
@@ -127,7 +127,7 @@
                   <label for="responsible">Enter a task</label>
                 </div>
                 <div class="row">
-                  <input type="text" value="Buy milk..."></div>
+                  <input type="text" name="task" value="Buying milk..."></div>
                 <div class="row">
                   <label for="responsible">Select who is responsible</label>
                 </div>
@@ -144,6 +144,9 @@
               <div class="row">
                 <a class="btn btn-clean-dark btn-lg col-md-9" id="brainstorm" href="add-todo.html">Add TO-DO</a>
               </div>
+              <table id="todo-list">
+                
+              </table>
               <hr/>
               <h3 class="less-margin">Vote</h3>
               <p>
@@ -317,6 +320,23 @@
 
     e.preventDefault();
     $('#agenda-editor').append('<h1>Agenda Item ' + ++number + '</h1><p>Nam illum adipisci.</p>');
+  });
+
+  $('a[href="add-todo.html"]').click(function(e){
+    
+    e.preventDefault();
+
+
+    var header = '<tr><th>Status</th><th>Responsible</th><th>Task</th></tr>'
+    var task = $('input[name="task"]').val();
+    var responsible = $('select[name="responsible"] option:selected').text();
+    console.log(responsible);
+
+    // $('#todo-list').append('<input type="checkbox"></input><li>'+responsible+' is responsible for '+task);
+
+    $('#todo-list').append('<tr><td><input type="checkbox"></td><td>'+responsible+'<td>'+task+'</tr>');
+
+
   });
 
   $('a[href="vote.html"]').click(function(e){
