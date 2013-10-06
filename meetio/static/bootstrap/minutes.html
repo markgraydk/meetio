@@ -27,6 +27,49 @@
 
 <body class="minutes">
 
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h3 class="modal-title">Share Minutes</h3>
+        </div>
+          <div class="separator-shadow-bottom">
+          <img alt="" src="assets/images/shadow-separator-wide-bottom.png"></div>
+        <div class="modal-body">
+          <h4>Email as PDF</h4>
+          <form>
+            <div class="row">
+              <label class="col-md-12" for="emails">Enter email of one or more reciepients</label>
+            </div>
+            <div class="row">
+              <textarea class="emails" name="emails" id="" cols="65" rows="4"></textarea>
+            </div>
+            <div class="row">
+              <input type="submit" class="btn btn-primary pull-right" value="Send"></div>
+          </form>
+        </div>
+
+        <div class="separator-shadow-top">
+          <img alt="" src="assets/images/shadow-separator-wide-top.png"></div>
+
+          <div class="row cloud-sharing">
+            <a href="#dropbox" class="col-md-offset-3 col-md-3"><img src="assets/ico/Evernote.png" alt=""><small>Evernote</small></a>
+            <a href="#evernote" class="col-md-3"><img src="assets/ico/dropbox.png" alt=""><small>Share to DropBox</small></a>
+          </div>
+
+        <div class="separator-shadow-bottom">
+          <img alt="" src="assets/images/shadow-separator-wide-bottom.png"></div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+      <!-- /.modal-content --> </div>
+    <!-- /.modal-dialog --> </div>
+  <!-- /.modal -->
+
   <div class="noise-wrapper">
     <div class="header-main">
       <div class="container">
@@ -67,53 +110,54 @@
       <div class="container">
 
         <h1 id="main-heading" class="animated fadeInDown">Take minutes with ease</h1>
-        <a class="btn btn-primary btn-lg share-btn" href="share.html">Share</a>
+        <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg share-btn">Share</a>
 
         <div class="col-md-12" id="template-chooser">
-
 
           <div class="tab-content row">
             <div class="tab-pane col-md-3 active" id="popular">
               <h3 class="less-margin">Agenda Item</h3>
               <div class="row">
-                <a id="blank" class="btn btn-clean-dark btn-lg" href="add-agenda-item.html">Add new Item</a>
+                <a id="blank" class="btn btn-clean-dark btn-lg col-md-9" href="add-agenda-item.html">Add new Item</a>
               </div>
               <hr/>
               <h3 class="less-margin">TO-DO</h3>
               <form>
-              <div class="row">
-                <label for="responsible">Enter a task</label>
-              </div>
-              <div class="row">
-                <input type="text" value="Buy milk...">
-              </div>
-              <div class="row">
-              <label for="responsible">Select who is responsible</label>
-              </div>
-              <div class="row">
-                <select name="responsible">
-                  <option>Christian</option>
-                  <option>Jesper</option>
-                  <option>Kristiyan</option>
-                  <option>Marijn</option>
-                  <option>Mark</option>
-                </select>
-              </div>
+                <div class="row">
+                  <label for="responsible">Enter a task</label>
+                </div>
+                <div class="row">
+                  <input type="text" value="Buy milk..."></div>
+                <div class="row">
+                  <label for="responsible">Select who is responsible</label>
+                </div>
+                <div class="row">
+                  <select name="responsible">
+                    <option>Christian</option>
+                    <option>Jesper</option>
+                    <option>Kristiyan</option>
+                    <option>Marijn</option>
+                    <option>Mark</option>
+                  </select>
+                </div>
               </form>
               <div class="row">
-                <a class="btn btn-clean-dark btn-lg" id="brainstorm" href="add-todo.html">Add TO-DO</a>
+                <a class="btn btn-clean-dark btn-lg col-md-9" id="brainstorm" href="add-todo.html">Add TO-DO</a>
               </div>
               <hr/>
               <h3 class="less-margin">Vote</h3>
               <p>
-                Are you for or against <span class="vote-item">agenda item 1</span>?
+                Are you for or against
+                <span class="vote-item">agenda item 1</span>
+                ?
               </p>
               <form class="vote-form">
-              <input type="radio" name="vote-grp" value="yes"> Yes<br>
-              <input type="radio" name="vote-grp" value="no"> No
-              </form>
+                <input type="radio" name="vote-grp" value="yes">
+                Yes
+                <br>
+                <input type="radio" name="vote-grp" value="no">No</form>
               <div class="row">
-                <a class="btn btn-clean-dark btn-lg" id="idoart" href="vote.html">Vote</a>
+                <a class="btn btn-clean-dark btn-lg col-md-9" id="idoart" href="vote.html">Vote</a>
               </div>
               <hr>
               <h3 class="less-margin">Record</h3>
@@ -121,8 +165,10 @@
                 Make an audiorecording and use the notes to find back to that essential part.
               </p>
               <div class="row">
-                <a class="btn btn-clean-dark btn-lg" id="idoart" href="record.html">Record</a>
-                <p><small>Premium Feature</small></p>
+                <a class="btn btn-clean-dark btn-lg col-md-9" id="idoart" href="record.html">Record</a>
+                <p class="row">
+                  <small class="col-md-9 text-center">Premium Feature</small>
+                </p>
               </div>
             </div>
             <div class="tab-pane col-md-4" id="scrum">
@@ -176,29 +222,17 @@
 
             <div class="col-md-9" id="agenda-editor">
               <h1>Agenda Item 1</h1>
-              <p class="editable">
-                Lorem ipsum dolor sit amet.
-              </p>
+              <p class="editable">Lorem ipsum dolor sit amet.</p>
               <h1>Agenda Item 2</h1>
-              <p class="editable">
-                Consectetur adipiscing elit.
-              </p>
+              <p class="editable">Consectetur adipiscing elit.</p>
               <h1>Agenda Item 3</h1>
-              <p class="editable">
-                Reiciendis dignissimos nisi.
-              </p>
+              <p class="editable">Reiciendis dignissimos nisi.</p>
               <h1>Agenda Item 4</h1>
-              <p class="editable">
-                Enim, ducimus natus iusto recusandae
-              </p>
+              <p class="editable">Enim, ducimus natus iusto recusandae</p>
               <h1>Agenda Item 5</h1>
-              <p class="editable">
-                Molestias sit ex dolores ullam
-              </p>
+              <p class="editable">Molestias sit ex dolores ullam</p>
               <h1>Agenda Item 6</h1>
-              <p class="editable">
-                Nam illum adipisci.
-              </p>
+              <p class="editable">Nam illum adipisci.</p>
             </div>
 
           </div>
@@ -257,11 +291,6 @@
       </div>
     </div>
   </footer>
-
-
-
-
-
 
   <script src='assets/js/jquery.js'></script>
   <script src='assets/js/bootstrap/button.js'></script>
