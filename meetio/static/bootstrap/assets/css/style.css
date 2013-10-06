@@ -145,8 +145,10 @@ font-size: 20px;
 	font-size:1em;
 }
 .video-wrapper {
-	width:60%;
+	width:640px;
+	height:360px;
 	margin:1em auto;
+	background-color: black;
 }
 .leaderboard.leaderboard-style-one .tab-content  h2{
 	margin-top:2em;
@@ -159,4 +161,16 @@ ul#todo-list {
 }
 #todo-list input[type="checkbox"] {
 	display:inline;
+}
+#forms2, #forms3 {
+	display:none;
+}
+.area-content h2, .area-content h2:first-child {
+	margin-top:1em;
+}
+#lorteknap {
+	position:relative;
+	left:900px;
+	margin-bottom:20px;
+
 }
