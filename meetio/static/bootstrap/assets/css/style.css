@@ -8,7 +8,7 @@
 .visible-lg a[data-toggle="tab"] {
 	background-color: #fafaff;
 }
-<<<<<<< HEAD
+
 .hidden-agenda {
 	display:none;
 }
@@ -19,6 +19,7 @@
 .cta-group {
 	margin-bottom:3em;
 }
-=======
 
->>>>>>> mark
+.item > h4 {
+	min-height: 300px;
+}
