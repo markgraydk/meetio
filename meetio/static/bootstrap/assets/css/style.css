@@ -8,7 +8,6 @@
 .visible-lg a[data-toggle="tab"] {
 	background-color: #fafaff;
 }
-<<<<<<< HEAD
 .hidden-agenda {
 	display:none;
 }
@@ -19,6 +18,24 @@
 .cta-group {
 	margin-bottom:3em;
 }
-=======
+.tab-pane {
+	border-right:1px solid #eeeeee;
+}
+.tab-content {
+	border:none;
+	-webkit-box-shadow: 0px 1px 12px 0px #949494; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
+  	box-shadow: 0px 1px 12px 0px #949494; /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
+}
+.vote-form {
+	text-align:left;
+	margin-bottom: 1em;
+}
+.tab-content {
+	text-align:left;
+}
+.share-btn {
+	position:absolute;
+	right:9.3%;
+	top:2.5em;
 
->>>>>>> mark
+}

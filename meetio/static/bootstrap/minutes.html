@@ -25,7 +25,7 @@
 
 </head>
 
-<body>
+<body class="minutes">
 
   <div class="noise-wrapper">
     <div class="header-main">
@@ -66,63 +66,66 @@
     <section class="leaderboard leaderboard-style-one">
       <div class="container">
 
-        <h1 id="main-heading" class="animated fadeInDown">Every great meeting starts with an agenda</h1>
-
-        <div class="row cta-group">
-          <a class="btn btn-primary btn-lg" href="schedule.html">Schedule a meeting</a>
-          <a class="btn btn-primary btn-lg" href="send.html">Send agenda</a>
-          <a class="btn btn-primary btn-lg" href="minutes.html">Start your meeting</a>
-        </div>
-
-        <h2 id="agenda">Or create a new agenda below...</h2>
+        <h1 id="main-heading" class="animated fadeInDown">Take minutes with ease</h1>
+        <a class="btn btn-primary btn-lg share-btn" href="share.html">Share</a>
 
         <div class="col-md-12" id="template-chooser">
 
-          <ul class="nav nav-tabs">
-            <li class="active visible-lg">
-              <a data-toggle="tab" href="#popular">Popular</a>
-            </li>
-            <li class="visible-lg">
-              <a data-toggle="tab" href="#sales">Sales</a>
-            </li>
-            <li class="visible-lg">
-              <a data-toggle="tab" href="#scrum">SCRUM</a>
-            </li>
 
-            <li class="visible-lg">
-              <a data-toggle="tab" href="#messages">LEAN</a>
-            </li>
-            <li class="visible-lg">
-              <a data-toggle="tab" href="#messages">How industry leaders does it</a>
-            </li>
-          </ul>
           <div class="tab-content row">
             <div class="tab-pane col-md-3 active" id="popular">
-              <h3 class="less-margin">Blank template</h3>
-              <p>
-                Craft your own agenda from scratch. This will give you the freedom to do whatever you like!
-              </p>
+              <h3 class="less-margin">Agenda Item</h3>
               <div class="row">
-                <a id="blank" class="btn btn-clean-dark btn-lg" href="create-agenda.html">Create agenda</a>
+                <a id="blank" class="btn btn-clean-dark btn-lg" href="add-agenda-item.html">Add new Item</a>
               </div>
               <hr/>
-              <h3 class="less-margin">Brainstorm</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, dolor, commodi, nemo enim est impedit necessitatibus sed cum obcaecati error iste ipsa a repellat vel aliquam asperiores unde nihil consequuntur!
-              </p>
+              <h3 class="less-margin">TO-DO</h3>
+              <form>
               <div class="row">
-                <a class="btn btn-clean-dark btn-lg" id="brainstorm" href="create-agenda.html">Create agenda</a>
+                <label for="responsible">Enter a task</label>
+              </div>
+              <div class="row">
+                <input type="text" value="Buy milk...">
+              </div>
+              <div class="row">
+              <label for="responsible">Select who is responsible</label>
+              </div>
+              <div class="row">
+                <select name="responsible">
+                  <option>Christian</option>
+                  <option>Jesper</option>
+                  <option>Kristiyan</option>
+                  <option>Marijn</option>
+                  <option>Mark</option>
+                </select>
+              </div>
+              </form>
+              <div class="row">
+                <a class="btn btn-clean-dark btn-lg" id="brainstorm" href="add-todo.html">Add TO-DO</a>
               </div>
               <hr/>
-              <h3 class="less-margin">I DO ART</h3>
+              <h3 class="less-margin">Vote</h3>
               <p>
-                The I DO ART model is model is a technique for preparing meetings. The template consist out of the letters I DO ART beneath each other and need to be filled in before the meeting starts.
+                Are you for or against <span class="vote-item">agenda item 1</span>?
+              </p>
+              <form class="vote-form">
+              <input type="radio" name="vote-grp" value="yes"> Yes<br>
+              <input type="radio" name="vote-grp" value="no"> No
+              </form>
+              <div class="row">
+                <a class="btn btn-clean-dark btn-lg" id="idoart" href="vote.html">Vote</a>
+              </div>
+              <hr>
+              <h3 class="less-margin">Record</h3>
+              <p>
+                Make an audiorecording and use the notes to find back to that essential part.
               </p>
               <div class="row">
-                <a class="btn btn-clean-dark btn-lg" id="idoart" href="create-agenda.html">Create agenda</a>
+                <a class="btn btn-clean-dark btn-lg" id="idoart" href="record.html">Record</a>
+                <p><small>Premium Feature</small></p>
               </div>
             </div>
-            <div class="tab-pane col-md-3" id="scrum">
+            <div class="tab-pane col-md-4" id="scrum">
               <h3>Daily SCRUM</h3>
               <p>
                 Scrum meetings are a special kind of stand-up meeting in which everyone tells about their progress of the day before and their goals for that day. Features that need to be implemented into a release are so called user stories and bundled into sprints. The amount of time left to complete a sprint is estimated and plotted daily. From this burndown chart a burndown velocity can be calculated. This tells you when the release will be ready and if you are on track or behind.
@@ -145,7 +148,7 @@
                 <a class="btn btn-clean-dark btn-lg" id="scrum-retro" href="create-agenda.html">Create agenda</a>
               </div>
             </div>
-            <div class="tab-pane col-md-3" id="sales">
+            <div class="tab-pane col-md-4" id="sales">
               <h3>Sales Kickoff Meeting</h3>
               <p>
                 Steve W. Martin is the author of the "Heavy Hitter" series of books for senior salespeople. He has keynoted and conducted sales training breakout sessions at hundreds of sales meetings and annual sales kickoffs. The structure of the meeting’s agenda is one of the key factors that  will determine the meeting’s overall success. Since the meeting is short, there simply isn’t enough time to devote to detailed  hands-on product training. Rather, higher level information should be presented  and the more detailed material provided online.
@@ -171,14 +174,30 @@
               </div>
             </div>
 
-            <div class="editable col-md-9" id="agenda-editor">
+            <div class="col-md-9" id="agenda-editor">
               <h1>Agenda Item 1</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut nisl est. Nullam eget sem nibh. Vivamus non turpis dui. Fusce sit amet vulputate velit, gravida pretium tellus. Fusce mattis dictum bibendum. Sed varius, neque quis pretium interdum, nulla diam ornare est, eu hendrerit enim massa sed massa. Pellentesque consectetur ac ligula quis pulvinar. Pellentesque vel sagittis justo. Curabitur vehicula lectus et libero faucibus, a congue mi fringilla. Donec in ipsum ut leo accumsan fringilla vel vel est. Aliquam mollis felis hendrerit, lacinia mauris ac, iaculis dolor. Aliquam molestie eros eget blandit laoreet. Integer tristique non mauris nec lacinia. Morbi dictum leo congue, condimentum mauris ornare, adipiscing arcu. Aliquam pulvinar iaculis turpis, ultricies porttitor tortor. In non nulla suscipit, dapibus nisi sed, scelerisque augue.
+              <p class="editable">
+                Lorem ipsum dolor sit amet.
               </p>
               <h1>Agenda Item 2</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut nisl est. Nullam eget sem nibh. Vivamus non turpis dui. Fusce sit amet vulputate velit, gravida pretium tellus. Fusce mattis dictum bibendum. Sed varius, neque quis pretium interdum, nulla diam ornare est, eu hendrerit enim massa sed massa. Pellentesque consectetur ac ligula quis pulvinar. Pellentesque vel sagittis justo. Curabitur vehicula lectus et libero faucibus, a congue mi fringilla. Donec in ipsum ut leo accumsan fringilla vel vel est. Aliquam mollis felis hendrerit, lacinia mauris ac, iaculis dolor. Aliquam molestie eros eget blandit laoreet. Integer tristique non mauris nec lacinia. Morbi dictum leo congue, condimentum mauris ornare, adipiscing arcu. Aliquam pulvinar iaculis turpis, ultricies porttitor tortor. In non nulla suscipit, dapibus nisi sed, scelerisque augue.
+              <p class="editable">
+                Consectetur adipiscing elit.
+              </p>
+              <h1>Agenda Item 3</h1>
+              <p class="editable">
+                Reiciendis dignissimos nisi.
+              </p>
+              <h1>Agenda Item 4</h1>
+              <p class="editable">
+                Enim, ducimus natus iusto recusandae
+              </p>
+              <h1>Agenda Item 5</h1>
+              <p class="editable">
+                Molestias sit ex dolores ullam
+              </p>
+              <h1>Agenda Item 6</h1>
+              <p class="editable">
+                Nam illum adipisci.
               </p>
             </div>
 
@@ -241,36 +260,6 @@
 
 
 
-<!-- Agenda templates goes down here -->
-
-  <div id="blank-agenda-template" class="hidden-agenda">
-    <h1>Meeting title</h1>
-  </div>
-
-  <div id="brainstorm-agenda-template" class="hidden-agenda">
-    <h1>Brainstorm meeting</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, ex, rem, necessitatibus quis natus suscipit eaque sunt laudantium vitae sapiente atque dolorem amet iste quam accusamus esse mollitia nesciunt error.</p>
-  </div>
-
-  <div id="idoart-agenda-template" class="hidden-agenda">
-    <h1>I DO ART template</h1>
-    <h2>Intention</h2>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-    <h2>Do</h2>
-    Assumenda nulla tempora
-    <h2>Agenda</h2>
-    Quia, dolorem, adipisci earum rem ex quis ipsa perspiciatis assumenda nulla tempora amet excepturi ea odit ab doloremque similique veritatis veniam quos.
-    <h2>Intention</h2>
-    Doloremque similique veritatis
-    <h2>Rules and Roles</h2>
-    Consectetur adipisicing elit. 
-    <h2>Time</h2>
-    30:00 Minutes
-  </div>
-
-
-
-
 
 
 
@@ -294,20 +283,25 @@
     e.preventDefault();
   });
 
-
-  $('a[href="create-agenda.html"]').click(function(e){
-    
-    var id = $(this).attr('id');
-
+  $('a[href="add-agenda-item.html"]').click(function(e){
+    var number = $('#agenda-editor h1').size();
 
     e.preventDefault();
+    $('#agenda-editor').append('<h1>Agenda Item ' + ++number + '</h1><p>Nam illum adipisci.</p>');
+  });
 
-    var $element = $('#'+id+'-agenda-template');
+  $('a[href="vote.html"]').click(function(e){
+      e.preventDefault();
+      debugger;
+      $('.vote-form').html("<input class='dial' data-fgColor='#87ceeb' data-linecap='round' data-thickness='.2' type='text' value='60'><h4 class='text-center'>Result: 60% for</h4>");
 
-    $('#agenda-editor').html($element.fadeIn('slow'));
-    $('.tab-pane').hide('drop');
-    $('#agenda-editor').removeClass('col-md-8').addClass('col-md-12');
-
+      $(".dial").knob({
+        readOnly: true,
+        draw: function() {
+          return $(this.i).val(this.cv + "%");
+        }
+      });
+      $(this).remove();
   });
 
 
