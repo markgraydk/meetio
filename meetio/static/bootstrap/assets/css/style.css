@@ -8,10 +8,7 @@
 .visible-lg a[data-toggle="tab"] {
 	background-color: #fafaff;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 62f4b462be39cd08bd22f2eb50272d89832acf49
 .hidden-agenda {
 	display:none;
 }
@@ -22,12 +19,8 @@
 .cta-group {
 	margin-bottom:3em;
 }
-<<<<<<< HEAD
 
-.item > h4 {
-	min-height: 300px;
-}
-=======
+
 .tab-pane {
 	border-right:1px solid #eeeeee;
 }
@@ -49,4 +42,12 @@
 	top:2.5em;
 
 }
->>>>>>> 62f4b462be39cd08bd22f2eb50272d89832acf49
+
+
+.top-buffer { margin-top:1px; }
+
+.doc-max-width 
+{
+	max-height: 200px;
+}
+
