@@ -42,8 +42,6 @@
 	top:2.5em;
 
 }
-
-
 .top-buffer { margin-top:1px; }
 
 .doc-max-width 
@@ -51,3 +49,29 @@
 	max-height: 200px;
 }
 
+.cloud-sharing {
+	text-align:center;
+}
+.cloud-sharing img {
+	max-width:100%;
+}
+.cloud-sharing a {
+	min-height:9em;
+	position:relative;
+}
+.cloud-sharing small {
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+}
+.modal-content .row{
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+.modal-footer, .modal-header {
+	border:0;
+}
+input, select, textarea {
+	margin-bottom:1em;
+}
