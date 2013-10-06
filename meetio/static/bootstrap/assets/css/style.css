@@ -85,3 +85,78 @@
 input, select, textarea {
 	margin-bottom:1em;
 }
+.video-wrapper {
+	-webkit-box-shadow: 0px 1px 12px 0px #949494; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
+  	box-shadow: 0px 1px 12px 0px #949494; /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
+}
+
+/* Pricing table */
+.pricing-table-columns .plan-column {
+	text-align: center;
+	background-color: #F4F8FC;
+	-webkit-box-shadow: inset 0px 2px 1px 0px #ffffff;
+	box-shadow: inset 0px 2px 1px 0px #ffffff;
+	border: 1px solid #98A0AA;
+}
+.pricing-table-columns .plan-column.highlight {
+	border: 1px solid #98A0AA;
+	margin: -25px;
+	margin-bottom: -25px;
+	background-color: #fff;
+	padding-bottom: 20px;
+	-webkit-box-shadow: 0px 0px 20px 1px #d3dce5;
+	box-shadow: 0px 0px 20px 1px #d3dce5;
+}
+.pricing-table-columns .plan-column h4 {
+	text-transform: uppercase;
+	font-size: 24px;
+	padding-top: 30px;
+	margin-top: 0px;
+}
+.pricing-table-columns .plan-column .plan-price {
+	font-size: 2em;
+	font-weight: 300;
+	padding: 35px 0px;
+	line-height: 60px;
+}
+.pricing-table-columns .plan-column.highlight .plan-price {
+font-size: 2.5em;
+line-height: 2em;
+}
+.pricing-table-columns .plan-column ul {
+margin: 0px;
+padding: 30px 20px 0px;
+padding-top: 30px;
+list-style: none;
+}
+.pricing-table-columns .plan-column ul li {
+margin-bottom: 15px;
+padding-bottom: 15px;
+/*border-bottom: 1px solid #d3e1e9;*/
+font-size: 20px;
+}
+.plan-column .btn {
+	margin-bottom:2em;
+}
+.member-social {
+	display:none;
+}
+.team-member h3 {
+	font-size:1em;
+}
+.video-wrapper {
+	width:60%;
+	margin:1em auto;
+}
+.leaderboard.leaderboard-style-one .tab-content  h2{
+	margin-top:2em;
+	margin-bottom:0em;
+}
+ul#todo-list {
+	list-style-type:disc;
+	margin-top:2em;
+	padding-left:0;
+}
+#todo-list input[type="checkbox"] {
+	display:inline;
+}

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-
+  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel='stylesheet' href='assets/css/app.css'>
@@ -27,6 +27,38 @@
 
 <body>
 
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h3 class="modal-title">Send Agenda</h3>
+        </div>
+          <div class="separator-shadow-bottom">
+          <img alt="" src="assets/images/shadow-separator-wide-bottom.png"></div>
+        <div class="modal-body">
+          <h4>Email as PDF</h4>
+          <form>
+            <div class="row">
+              <label class="col-md-12" for="emails">Add participants by entering their emails.</label>
+            </div>
+            <div class="row">
+              <textarea class="emails" name="emails" id="" cols="65" rows="4"></textarea>
+            </div>
+            <div class="row">
+              <input type="submit" class="btn btn-primary pull-right" value="Send"></div>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+      <!-- /.modal-content --> </div>
+    <!-- /.modal-dialog --> </div>
+  <!-- /.modal -->
+
   <div class="noise-wrapper">
     <div class="header-main">
       <div class="container">
@@ -49,7 +81,7 @@
             </a>
             <ul class="nav navbar-nav navbar-right">
               <li class="current active">
-                <a class="current" href="#">Dashboard</a>
+                <a class="current" href="dashboard.html">Dashboard</a>
               </li>
               <li>
                 <a href="settings.html">Settings</a>
@@ -70,7 +102,7 @@
 
         <div class="row cta-group">
           <a class="btn btn-primary btn-lg" href="schedule.html">Schedule a meeting</a>
-          <a class="btn btn-primary btn-lg" href="send.html">Send agenda</a>
+          <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Send</a>
           <a class="btn btn-primary btn-lg" href="minutes.html">Start your meeting</a>
         </div>
 
