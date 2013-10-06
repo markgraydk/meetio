@@ -88,12 +88,37 @@
 
     <h2 class="text-center">Pick options for date and time</h2>
     <div class="pick-dates col-md-offset-3 col-md-6">
-      <form class="text-center">
+      <form class="text-center" id="forms1">
+<div class="row">
         		<p class="datepair" data-language="javascript">
 			<input type="text" class="date start" />
 			<input type="text" class="time start" /> to
 			<input type="text" class="time end" />
 			<input type="text" class="date end" />
+<a href="#" class='btn btn-success btn-xs' btn="#btn3">+</a>
+</div>
+		</p>
+      </form>
+   <form class="text-center" id="forms1">
+<div class="row">
+        		<p class="datepair" data-language="javascript">
+			<input type="text" class="date start" />
+			<input type="text" class="time start" /> to
+			<input type="text" class="time end" />
+			<input type="text" class="date end" />
+<a href="#" class='btn btn-success btn-xs' id="btn2">+</a>
+</div>
+		</p>
+      </form>
+   <form class="text-center">
+<div class="row">
+        		<p class="datepair" data-language="javascript">
+			<input type="text" class="date start" />
+			<input type="text" class="time start" /> to
+			<input type="text" class="time end" />
+			<input type="text" class="date end" />
+<a href="plus.html" class='btn btn-success btn-xs' id="#btn2">+</a>
+</div>
 		</p>
       </form>
     </div>
@@ -197,17 +222,14 @@
   });
 
 
-  $('a[href="create-agenda.html"]').click(function(e){
-    
-    var id = $(this).parent().parent().attr('id');
 
+$("#btn1").click(function(e){
+    
     console.log(id);
 
     e.preventDefault();
 
-    var $editor = $('#agenda-editor');
-
-    $('#'+id).html($editor.fadeIn('slow'));
+ $('#forms2').hide();
 
 
   });
